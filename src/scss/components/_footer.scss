@@ -1,0 +1,22 @@
+.footer {
+    background-color: black;
+    color: white;
+    padding: 20px 0;
+
+    &__links {
+        padding: 20px 0;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__link {
+        &:hover {
+            color: blue;
+        }
+    }
+
+    &__privacy {
+        text-align: center;
+        padding: 20px 0 10px;
+    }
+}

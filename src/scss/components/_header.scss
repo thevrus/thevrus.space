@@ -1,0 +1,70 @@
+.header {
+    height: 100vh;
+
+    &__footer {
+        text-align: right;
+    }
+}
+
+.nav {
+    margin-top: 60px;
+    display: flex;
+    justify-content: space-between;
+
+    &__link {
+        transition: 0.5s;
+
+        &:hover {
+            opacity: 0.8;
+            color: red;
+        }
+
+        &--brand {
+            font-weight: bold;
+            font-size: 28px;
+        }
+
+        &--hello {
+            font-size: 22px;
+
+            &::after {
+                content: ' 👋🏼';
+            }
+        }
+    }
+}
+
+.description {
+    margin: 0 auto;
+    text-align: center;
+    max-width: 800px;
+    margin-top: 10%;
+    margin-bottom: 10%;
+
+    &__title {
+        font-weight: bold;
+        font-size: 100px;
+        margin-bottom: 30px;
+    }
+
+    &__subtitle {
+        font-size: 24px;
+        line-height: 1.7;
+    }
+}
+
+.button {
+    right: 0;
+    bottom: 0;
+    cursor: pointer;
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    width: 50px;
+    transition: transform .5s;
+
+    &:hover {
+        transform: scale(1.1);
+    }
+}

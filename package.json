@@ -1,0 +1,29 @@
+{
+  "name": "thevrus.com",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thevrus/thevrus.git"
+  },
+  "author": "Vadim Rusin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/thevrus/thevrus/issues"
+  },
+  "homepage": "https://github.com/thevrus/thevrus#readme",
+  "devDependencies": {
+    "browser-sync": "^2.26.5",
+    "cssnano": "^4.1.10",
+    "del": "^3.0.0",
+    "gulp": "^4.0.0",
+    "gulp-autoprefixer": "^6.1.0",
+    "gulp-cssnano": "^2.1.3",
+    "gulp-header": "^2.0.7",
+    "gulp-sass": "^4.0.2"
+  }
+}
