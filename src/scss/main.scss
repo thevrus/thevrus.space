@@ -1,7 +1,8 @@
-@import 'reset';
-// @import 'maintenace';
-@import 'animations';
-@import 'style';
-@import 'project';
-@import 'components/header';
-@import 'components/footer';
+@import "reset";
+@import "grid";
+@import "animations";
+@import "style";
+@import "scroll";
+@import "layout/header";
+@import "layout/works";
+@import "layout/footer";

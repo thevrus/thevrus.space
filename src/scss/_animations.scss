@@ -1,35 +1,122 @@
 @keyframes moveInLeft {
-    0% {
-        opacity: 0;
-        transform: translateX(-100px);
-    }
+  0% {
+    opacity: 0;
+    transform: translateX(-50%);
+  }
 
-    100% {
-        opacity: 1;
-        transform: translate(0);
-    }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 @keyframes moveInRight {
-    0% {
-        opacity: 0;
-        transform: translateX(100px);
-    }
+  0% {
+    opacity: 0;
+    transform: translateX(100px);
+  }
 
-    100% {
-        opacity: 1;
-        transform: translate(0);
-    }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
 }
 
 @keyframes moveInUp {
-    0% {
-        opacity: 0;
-        transform: translateY(100px);
-    }
+  0% {
+    transform: translateY(100px);
+  }
 
-    100% {
-        opacity: 1;
-        transform: translate(0);
-    }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes moveInDown {
+  0% {
+    transform: translateY(-100px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes scrollLine {
+  0% {
+    transform: translateY(-100%);
+  }
+
+  100% {
+    transform: translateY(200%);
+  }
+}
+
+@keyframes borderColor {
+  0% {
+    border-top-color: #ff0000;
+  }
+
+  10% {
+    border-top-color: #ffbb00;
+  }
+
+  20% {
+    border-top-color: #eeff00;
+  }
+
+  40% {
+    border-top-color: #00ff0d;
+  }
+
+  60% {
+    border-top-color: #00d9ff;
+  }
+
+  80% {
+    border-top-color: #1900ff;
+  }
+
+  90% {
+    border-top-color: #d91cff;
+  }
+
+  100% {
+    border-top-color: #ff0000;
+  }
+}
+@keyframes bgColor {
+  0% {
+    background: #ff1c1c;
+  }
+
+  20% {
+    background: #f0ff1c;
+  }
+
+  40% {
+    background: #1cff27;
+  }
+
+  60% {
+    background: #1cddff;
+  }
+
+  80% {
+    background: #d91cff;
+  }
+
+  100% {
+    background: #ff1c1c;
+  }
 }

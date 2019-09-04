@@ -1,0 +1,76 @@
+.footer {
+  min-height: 100vh;
+  background-color: #000;
+  color: #fff;
+
+  &__text {
+    position: relative;
+    min-height: 80vh;
+    display: block;
+  }
+
+  &__text-content {
+    position: absolute;
+    padding: 0 15px;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    font-size: 36px;
+    line-height: 1.5;
+    font-weight: bold;
+    text-align: center;
+
+    @include breakpoint(large) {
+      text-align: left;
+      font-size: 80px;
+    }
+  }
+
+  &__mail {
+    display: block;
+    position: relative;
+    min-height: 20vh;
+    background-color: #40afff;
+
+    font-size: 20px;
+    text-align: center;
+
+    transition: background-color 0.3s;
+
+    @include breakpoint(large) {
+      font-size: 28px;
+
+      &:hover {
+        background-color: #ff4040;
+      }
+
+      &:active {
+        background-color: #af1919;
+      }
+    }
+  }
+
+  &__mail-text {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    color: #fff;
+    line-height: 1.5;
+    font-weight: 300;
+    font-size: 20px;
+    letter-spacing: 0.05em;
+
+    @include breakpoint(large) {
+      line-height: 55px;
+    }
+  }
+
+  &__span-mail {
+    font-weight: 800;
+  }
+}

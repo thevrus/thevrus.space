@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+#include('./partials/head.html', {
+"project": "true"
+})
+
+<body>
+  <div class="container">
+    #include('./partials/project-nav.html')
+
+    #include('./partials/project.html', {
+      "project": "true",
+      "title": "Czysto! —",
+      "images":
+      [
+        "images/czysto/index.png",
+        "images/czysto/login.png",
+        "images/czysto/logos.png",
+        "images/czysto/billboard.jpg"
+      ]
+    })
+  </div>
+
+  #include('./partials/scripts.html')
+</body>
+
+</html>

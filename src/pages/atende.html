@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+#include('./partials/head.html', {
+"project": "true"
+})
+
+<body>
+  <div class="container">
+    #include('./partials/project-nav.html')
+
+    #include('./partials/project.html', {
+      "project": "true",
+      "title": "Atende Software —",
+      "images": ["images/atende/atende.jpg"]
+    })
+  </div>
+
+  #include('./partials/scripts.html')
+</body>
+
+</html>

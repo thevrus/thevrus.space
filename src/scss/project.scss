@@ -1,0 +1,95 @@
+@import "reset";
+@import "scroll";
+@import "animations";
+
+body {
+  font-family: "Raleway", sans-serif;
+}
+
+@media (prefers-color-scheme: dark) {
+  body,
+  .nav__brand {
+    transition: background-color 0.3s, color 0.3s;
+    background-color: #000 !important;
+    color: #fff !important;
+  }
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1440px;
+  width: 100%;
+}
+
+.nav {
+  height: 100px;
+  line-height: 100px;
+  padding: 0 5rem;
+
+  @media only screen and (max-width: 1024px) {
+    padding: 1rem;
+  }
+
+  &__brand {
+    color: black;
+    font-size: 3rem;
+    text-decoration: none;
+    transition: color 0.3s;
+
+    &:hover {
+      color: #ff0000;
+    }
+  }
+}
+
+.header {
+  padding: 4rem;
+
+  @media only screen and (max-width: 1024px) {
+    width: 96%;
+    padding: 1rem;
+    margin: 1rem 0;
+    text-align: left;
+  }
+
+  &__subtitle {
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 4px;
+    margin-top: 5rem;
+    font-size: 0.8rem;
+
+    @media only screen and (max-width: 1024px) {
+      font-size: 0.5rem;
+      margin-top: 1rem;
+    }
+  }
+
+  &__title {
+    margin-top: 0;
+    font-size: 4rem;
+    font-weight: bold;
+    animation: moveInLeft;
+    animation-duration: 1s;
+
+    @media only screen and (max-width: 1024px) {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      font-weight: 700;
+    }
+  }
+}
+.work {
+  text-align: center;
+  width: 100%;
+  padding: 0 5%;
+
+  &__img {
+    width: 100%;
+    margin-bottom: 3rem;
+    border-radius: 5px;
+    box-shadow: 0 30px 140px -50px rgba(44, 48, 56, 0.5);
+    animation: moveInRight;
+    animation-duration: 1s;
+  }
+}
