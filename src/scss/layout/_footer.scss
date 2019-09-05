@@ -3,6 +3,17 @@
   background-color: #000;
   color: #fff;
 
+  $border: 1.5px solid #fff;
+
+  ul {
+    padding-left: 20px;
+    list-style: initial;
+  }
+
+  li {
+    margin-bottom: 4px;
+  }
+
   &__text {
     position: relative;
     min-height: 80vh;
@@ -10,12 +21,10 @@
   }
 
   &__text-content {
-    position: absolute;
-    padding: 0 15px;
+    padding: 32px 15px 0;
+    margin-bottom: 60px;
+
     width: 100%;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
 
     font-size: 36px;
     line-height: 1.5;
@@ -24,20 +33,85 @@
 
     @include breakpoint(large) {
       text-align: left;
-      font-size: 80px;
+      padding-top: 32px;
+      font-size: 52px;
     }
+  }
+
+  &__details {
+    padding-bottom: 16px;
+    margin: 24px 0;
+
+    border-bottom: $border;
+    font-family: Raleway;
+
+    @include breakpoint(large) {
+      margin: 52px 0;
+
+      &:hover .footer__summary {
+        opacity: 0.75;
+      }
+    }
+
+    &[open] .footer__summary-chevron {
+      transform: rotate(180deg);
+    }
+
+    &[open] summary ~ * {
+      animation: fadeIn 0.5s ease-in-out;
+    }
+  }
+
+  &__summary {
+    min-height: 48px;
+    padding: 16px 0;
+    outline: none;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 55px;
+    transition: opacity 0.5s;
+
+    &::after {
+      display: table;
+      content: " ";
+    }
+
+    @include breakpoint(large) {
+      margin-bottom: 24px;
+      font-size: 40px;
+    }
+  }
+
+  &__summary-title {
+    float: left;
+  }
+
+  &__summary-chevron {
+    float: right;
+    transition: transform 0.5s;
+  }
+
+  &__details-content,
+  ul,
+  li {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.5;
+    margin-bottom: 12px;
+    transition: height 0.3s;
   }
 
   &__mail {
     display: block;
     position: relative;
     min-height: 20vh;
-    background-color: #40afff;
+    background-color: #0033a7;
 
     font-size: 20px;
     text-align: center;
 
-    transition: background-color 0.3s;
+    transition: background-color 0.3s, transform 0.3s;
 
     @include breakpoint(large) {
       font-size: 28px;
@@ -47,6 +121,7 @@
       }
 
       &:active {
+        transform: translateY(4px);
         background-color: #af1919;
       }
     }
