@@ -1,12 +1,10 @@
 @import "reset";
+@import "grid";
 @import "scroll";
 @import "animations";
 
-body {
-  font-family: "Raleway", sans-serif;
-}
-
 @media (prefers-color-scheme: dark) {
+
   body,
   .nav__brand {
     transition: background-color 0.3s, color 0.3s;
@@ -16,69 +14,73 @@ body {
 }
 
 .container {
-  margin: 0 auto;
   max-width: 1440px;
-  width: 100%;
 }
 
 .nav {
   height: 100px;
   line-height: 100px;
-  padding: 0 5rem;
+  padding: 1rem;
 
-  @media only screen and (max-width: 1024px) {
-    padding: 1rem;
+  @include breakpoint(large) {
+    padding: 0 5rem;
   }
 
   &__brand {
     color: black;
-    font-size: 3rem;
+    font-size: 2rem;
     text-decoration: none;
     transition: color 0.3s;
 
     &:hover {
       color: #ff0000;
     }
+
+    @include breakpoint(large) {
+      font-size: 3rem;
+    }
   }
 }
 
 .header {
-  padding: 4rem;
+  width: 96%;
+  padding: 1rem;
+  margin: 1rem 0;
+  text-align: left;
 
-  @media only screen and (max-width: 1024px) {
-    width: 96%;
-    padding: 1rem;
-    margin: 1rem 0;
-    text-align: left;
+  @include breakpoint(large) {
+    padding: 4rem;
   }
 
   &__subtitle {
     text-transform: uppercase;
     font-weight: 700;
     letter-spacing: 4px;
-    margin-top: 5rem;
-    font-size: 0.8rem;
+    font-size: 0.5rem;
+    margin-top: 1rem;
 
-    @media only screen and (max-width: 1024px) {
-      font-size: 0.5rem;
-      margin-top: 1rem;
+    @include breakpoint(large) {
+      margin-top: 5rem;
+      font-size: 0.8rem;
     }
   }
 
   &__title {
     margin-top: 0;
-    font-size: 4rem;
-    font-weight: bold;
     animation: moveInLeft;
     animation-duration: 1s;
 
-    @media only screen and (max-width: 1024px) {
-      font-size: 2rem;
-      margin-bottom: 1rem;
-      font-weight: 700;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+
+    @include breakpoint(large) {
+      font-size: 4rem;
+      font-weight: 500;
     }
   }
 }
+
 .work {
   text-align: center;
   width: 100%;

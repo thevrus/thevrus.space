@@ -2,18 +2,8 @@
   --blue: #40afff;
 }
 
-body {
-  font-family: "Raleway", sans-serif;
-}
-
-.container {
-  margin: 0 auto;
-  padding: 0 15px;
-  max-width: 960px;
-  width: 100%;
-}
-
 @media (prefers-color-scheme: dark) {
+
   body,
   .header__h1,
   .works__title {
