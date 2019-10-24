@@ -1,9 +1,10 @@
 @import "reset";
+@import "mixins";
 @import "grid";
 @import "scroll";
 @import "animations";
 
-@media (prefers-color-scheme: dark) {
+@include scheme(dark) {
 
   body,
   .nav__brand {

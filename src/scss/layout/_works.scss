@@ -30,6 +30,10 @@
     @include breakpoint(large) {
       margin-bottom: 20px;
     }
+
+    @include scheme(dark) {
+      color: #d3d3d3;
+    }
   }
 
   &__list-item {

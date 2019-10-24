@@ -1,0 +1,17 @@
+$schemes: (
+  "dark": dark,
+  "light": light
+);
+
+@mixin scheme($scheme) {
+  @if map-has-key($schemes, $scheme) {
+    @media (prefers-color-scheme: $scheme) {
+      @content;
+    }
+  }
+
+  @else {
+    @warn "Unfortunately, no value could be retrieved from `#{$scheme}`. "
+    +"Available breakpoints are: #{map-keys($schemes)}.";
+  }
+}

@@ -2,7 +2,7 @@
   --blue: #40afff;
 }
 
-@media (prefers-color-scheme: dark) {
+@include scheme(dark) {
 
   body,
   .header__h1,
