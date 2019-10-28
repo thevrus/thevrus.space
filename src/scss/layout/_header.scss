@@ -8,6 +8,11 @@
     min-height: 100vh;
   }
 
+  @include scheme(dark) {
+    background-color: var(--dark);
+    color: #fff;
+  }
+
   &__content {
     padding-top: 20px;
 
@@ -19,7 +24,7 @@
     }
 
     a {
-      text-decoration: underline;
+      text-decoration: none;
       color: inherit;
       transition: color 0.3s;
 
@@ -46,6 +51,10 @@
       margin-bottom: 44px;
       font-size: 38px;
     }
+
+    @include scheme(dark) {
+      color: #fff;
+    }
   }
 
   &__socials {
@@ -58,12 +67,17 @@
       width: 80px;
       height: 3px;
       margin-bottom: 12px;
+
+      @include scheme(dark) {
+        background-color: #fff;
+      }
     }
   }
 
   &__socials-text {
     letter-spacing: 0.4px;
     margin-bottom: 8px;
+    font-weight: 100;
   }
 
   &__socials-list {
@@ -93,7 +107,6 @@
     transition: color 0.3s;
 
     &:hover {
-      text-decoration: underline;
       color: var(--blue);
       cursor: pointer;
     }

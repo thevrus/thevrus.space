@@ -1,6 +1,12 @@
 .works {
   margin-top: 80px;
   margin-top: 80px;
+  background-color: #F4F8FF;
+  padding: 4rem 0;
+
+  @include scheme(dark) {
+    background-color: var(--dark);
+  }
 
   @include breakpoint(large) {
     margin-bottom: 120px;
@@ -9,19 +15,34 @@
 
   &__title {
     margin-bottom: 4px;
+    display: inline-block;
     font-weight: 500;
     font-size: 24px;
-    color: #333333;
+    color: #131313;
 
     @include breakpoint(large) {
       letter-spacing: 0.01em;
       font-weight: 600;
       font-size: 36px;
     }
+
+    @include scheme(dark) {
+      color: #fff;
+    }
+  }
+
+  &__arrow {
+    margin-left: .6rem;
+
+    @include scheme(dark) {
+      path {
+        stroke: #fff;
+      }
+    }
   }
 
   &__subtitle {
-    color: #333;
+    color: #202020;
     font-weight: 500;
     font-size: 16px;
     letter-spacing: 0.4px;
@@ -45,13 +66,13 @@
   }
 
   &__image {
-    border-radius: 5px;
+    border-radius: 2px;
     box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.02);
-    transition: transform 0.5s, opacity 0.3s, box-shadow 0.3s;
+    transition: transform 0.8s, opacity 0.3s, box-shadow 0.5s;
 
     &:hover {
-      box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.05);
-      transform: scale(1.02);
+      box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.08);
+      transform: scale(1.01);
     }
 
     &:active {

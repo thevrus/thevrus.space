@@ -12,6 +12,6 @@ $schemes: (
 
   @else {
     @warn "Unfortunately, no value could be retrieved from `#{$scheme}`. "
-    +"Available breakpoints are: #{map-keys($schemes)}.";
+    +"Available schemes are: #{map-keys($schemes)}.";
   }
 }

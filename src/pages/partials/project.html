@@ -4,5 +4,9 @@
 </header>
 
   <main class="work">
-  #for (var i = 0; i < images.length; i++) { <img src="`+images[i]+`" class="work__img" alt="Cover" />}
+    #for (var i = 0; i < images.length; i++) {
+      <a href="`+images[i]+`">
+        <img src="`+images[i]+`" class="work__img" alt="#title image" />
+      </a>
+    }
   </main>

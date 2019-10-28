@@ -1,9 +1,7 @@
 .footer {
   min-height: 100vh;
-  background-color: #000;
-  color: #fff;
 
-  $border: 1.5px solid #fff;
+  $border: 1px solid #E8E8E8;
 
   ul {
     padding-left: 20px;
@@ -22,19 +20,19 @@
 
   &__text-content {
     padding: 32px 15px 0;
-    margin-bottom: 60px;
+    margin-bottom: 80px;
 
     width: 100%;
 
     font-size: 36px;
-    line-height: 1.5;
-    font-weight: 500;
+    line-height: 1.4;
+    font-weight: 700;
     text-align: center;
 
     @include breakpoint(large) {
       text-align: left;
       padding-top: 32px;
-      font-size: 52px;
+      font-size: 48px;
     }
   }
 
@@ -89,6 +87,12 @@
   &__summary-chevron {
     float: right;
     transition: transform 0.5s;
+
+    @include scheme(dark) {
+      & path {
+        stroke: white;
+      }
+    }
   }
 
   &__details-content,
@@ -110,18 +114,17 @@
     font-size: 20px;
     text-align: center;
 
-    transition: background-color 0.3s, transform 0.3s;
+    transition: background-color 0.5s ease-in-out, transform 0.3s;
 
     @include breakpoint(large) {
-      font-size: 28px;
+      font-size: 38px;
 
       &:hover {
-        background-color: #d940ff;
+        background-color: #0051ff;
       }
 
       &:active {
         transform: translateY(4px);
-        background-color: #af19a7;
       }
     }
   }
@@ -148,5 +151,6 @@
 
   &__span-mail {
     font-weight: 800;
+    font-size: 24px;
   }
 }

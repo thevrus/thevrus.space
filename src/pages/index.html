@@ -58,53 +58,47 @@
   <main class="works">
     <ul class="works__list container">
 
-      <li class="works__list-item">
-        <h4 class="works__title">Czysto!</h4>
-        <h5 class="works__subtitle">Design and Development</h5>
-        <a href="czysto.html" class="works__link">
-          <img src="images/czysto.jpg" class="works__image" loading="lazy" alt="Project cover" />
-        </a>
-      </li>
+      #include('./partials/project-item.html', {
+      "title": "Czysto!",
+      "subtitle": "Design and Development",
+      "link": "czysto.html",
+      "img": "images/czysto.jpg"
+      })
 
-      <li class="works__list-item">
-        <h4 class="works__title">HairCare</h4>
-        <h5 class="works__subtitle">Design</h5>
-        <a href="haircare.html" class="works__link">
-          <img src="images/haircare.jpg" class="works__image" loading="lazy" alt="Project cover" />
-        </a>
-      </li>
+      #include('./partials/project-item.html', {
+      "title": "Hair Care",
+      "subtitle": "Design",
+      "link": "haircare.html",
+      "img": "images/haircare.jpg"
+      })
 
-      <li class="works__list-item">
-        <h4 class="works__title">Schowek</h4>
-        <h5 class="works__subtitle">Design and Development</h5>
-        <a href="schowek.html" class="works__link">
-          <img src="images/schowek.jpg" class="works__image" loading="lazy" alt="Project cover" />
-        </a>
-      </li>
+      #include('./partials/project-item.html', {
+      "title": "Schowek",
+      "subtitle": "Design and Development",
+      "link": "schowek.html",
+      "img": "images/schowek.jpg"
+      })
 
-      <li class="works__list-item">
-        <h4 class="works__title">Atende Software</h4>
-        <h5 class="works__subtitle">Design</h5>
-        <a href="atende.html" class="works__link">
-          <img src="images/atende.jpg" class="works__image" loading="lazy" alt="Project cover" />
-        </a>
-      </li>
+      #include('./partials/project-item.html', {
+      "title": "Atende Software",
+      "subtitle": "Design",
+      "link": "atende.html",
+      "img": "images/atende.jpg"
+      })
 
-      <li class="works__list-item">
-        <h4 class="works__title">GetBike</h4>
-        <h5 class="works__subtitle">Design and Development</h5>
-        <a href="getbike.html" class="works__link">
-          <img src="images/getbike.jpg" class="works__image" loading="lazy" alt="Project cover" />
-        </a>
-      </li>
+      #include('./partials/project-item.html', {
+      "title": "GetBike",
+      "subtitle": "Design and Development",
+      "link": "getbike.html",
+      "img": "images/getbike.jpg"
+      })
 
-      <li class="works__list-item">
-        <h4 class="works__title">Millenium</h4>
-        <h5 class="works__subtitle">Design and Development</h5>
-        <a href="millennium.html" class="works__link">
-          <img src="images/millenium.jpg" class="works__image" loading="lazy" alt="Project cover" />
-        </a>
-      </li>
+      #include('./partials/project-item.html', {
+      "title": "Millenium",
+      "subtitle": "Design",
+      "link": "millennium.html",
+      "img": "images/millenium.jpg"
+      })
 
     </ul>
   </main>
@@ -112,16 +106,14 @@
   <footer class="footer">
     <div class="container">
       <div class="footer__text">
-        <div class="footer__text-content">
-          Currently i'm ready for new projects.
-        </div>
+        <p class="footer__text-content">Currently i'm open for new projects.</p>
 
         <details class="footer__details">
           <summary class="footer__summary">
             <p class="footer__summary-title">Front End Development</p>
             <svg class="footer__summary-chevron" width="44" height="44" viewbox="0 0 44 44" fill="none"
               xmlns="http://www.w3.org/2000/svg">
-              <path d="M11 16.5L22 27.5L33 16.5" stroke="white" stroke-width="4" stroke-linecap="round"
+              <path d="M11 16.5L22 27.5L33 16.5" stroke="black" stroke-width="4" stroke-linecap="round"
                 stroke-linejoin="round" />
             </svg>
 
@@ -147,7 +139,7 @@
             <p class="footer__summary-title">UI/UX Design</p>
             <svg class="footer__summary-chevron" width="44" height="44" viewbox="0 0 44 44" fill="none"
               xmlns="http://www.w3.org/2000/svg">
-              <path d="M11 16.5L22 27.5L33 16.5" stroke="white" stroke-width="4" stroke-linecap="round"
+              <path d="M11 16.5L22 27.5L33 16.5" stroke="black" stroke-width="4" stroke-linecap="round"
                 stroke-linejoin="round" />
             </svg>
 
@@ -162,7 +154,6 @@
               <li>Brand identity design</li>
               <li>Logo design</li>
               <li>Prototyping</li>
-              <li>UX Research</li>
             </ul>
           </p>
         </details>
@@ -171,7 +162,8 @@
 
     <a class="footer__mail" href="mailto:rusinvadym@gmail.com">
       <p class="footer__mail-text">
-        Let’s discuss your project: <span class="footer__span-mail">rusinvadym@gmail.com</span>
+        Let’s discuss your project: <br>
+        <span class="footer__span-mail">rusinvadym@gmail.com</span>
       </p>
     </a>
   </footer>
