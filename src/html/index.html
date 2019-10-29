@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+#include('./partials/head.html', {
+"index": "false"
+})
+
+<body>
+  <header class="header">
+    <div class="container">
+      <section class="header__content">
+        <h1 class="header__h1">
+          Hi 👋 my name is <b>Vadim Rusin</b>. <br />
+          I design and develop digital products. <br />
+          Based in Warsaw 🇵🇱. If you have any questions, feel
+          free to contact me via
+          <a href="mailto:rusinvadym@gmail.com" title="rusinvadym@gmail.com">email</a> or
+          <a href="resume.pdf" title="Rusin Vadym's CV" target="_blank">download my resume</a>.
+        </h1>
+
+        <section class="header__socials">
+          <p class="header__socials-text">Follow for updates</p>
+
+          <ul class="header__socials-list">
+            <li class="header__socials-list-item">
+              <a href="mailto:rusinvadym@gmail.com" target="_blank" rel="noopener"
+                class="header__socials-list-link">E-mail</a>
+            </li>
+
+            <li class="header__socials-list-item">
+              <a href="https://dribbble.com/iamvr" target="_blank" rel="noopener"
+                class="header__socials-list-link">Dribbble</a>
+            </li>
+
+            <li class="header__socials-list-item">
+              <a href="https://www.behance.net/iamvr" target="_blank" rel="noopener"
+                class="header__socials-list-link">Behance</a>
+            </li>
+
+            <li class="header__socials-list-item">
+              <a href="https://github.com/thevrus" target="_blank" rel="noopener"
+                class="header__socials-list-link">Github</a>
+            </li>
+
+            <li class="header__socials-list-item">
+              <a href="https://www.facebook.com/profile.php?id=100009240599244" target="_blank" rel="noopener"
+                class="header__socials-list-link">Facebook</a>
+            </li>
+          </ul>
+        </section>
+
+      </section>
+      <div class="scroll-line scroll-to"><span></span></div>
+    </div>
+
+  </header>
+
+  <main class="works">
+    <ul class="works__list container">
+
+      #include('./partials/project-item.html', {
+      "title": "Slight",
+      "subtitle": "Design",
+      "link": "slight.html",
+      "img": "images/slight.png"
+      })
+
+      #include('./partials/project-item.html', {
+      "title": "Taxi UI",
+      "subtitle": "Design",
+      "link": "taxi.html",
+      "img": "images/taxi.png"
+      })
+
+      #include('./partials/project-item.html', {
+      "title": "Czysto!",
+      "subtitle": "Design and Development",
+      "link": "czysto.html",
+      "img": "images/czysto.jpg"
+      })
+
+      #include('./partials/project-item.html', {
+      "title": "Clever beauty studio",
+      "subtitle": "Design and Development",
+      "link": "clever.html",
+      "img": "images/clever.jpg"
+      })
+
+      #include('./partials/project-item.html', {
+      "title": "Schowek",
+      "subtitle": "Design and Development",
+      "link": "schowek.html",
+      "img": "images/schowek.jpg"
+      })
+
+      #include('./partials/project-item.html', {
+      "title": "Atende Software",
+      "subtitle": "Design",
+      "link": "atende.html",
+      "img": "images/atende.jpg"
+      })
+
+      #include('./partials/project-item.html', {
+      "title": "GetBike",
+      "subtitle": "Design and Development",
+      "link": "getbike.html",
+      "img": "images/getbike.jpg"
+      })
+
+      #include('./partials/project-item.html', {
+      "title": "Millenium",
+      "subtitle": "Design",
+      "link": "millennium.html",
+      "img": "images/millennium.png"
+      })
+
+    </ul>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+
+      <div class="footer__text">
+        <p class="footer__text-content">Currently i'm open for new projects.</p>
+
+        <details class="footer__details">
+          <summary class="footer__summary">
+            <p class="footer__summary-title">Front End Development</p>
+            <svg class="footer__summary-chevron" width="44" height="44" viewbox="0 0 44 44" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path d="M11 16.5L22 27.5L33 16.5" stroke="black" stroke-width="4" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>
+
+          </summary>
+
+          <p class="footer__details-content">
+            Development of web applications and static sites.
+            <ul>
+              <li>Languages: JavaScript (ES6), HTML5, CSS3, FreeMarker</li>
+              <li>Frameworks & Libraries: React (Redux, Router), Vue (Vue Router, Vuex), jQuery, Bootstrap, Foundation
+              </li>
+              <li>Technologies: Git, Node.JS, Docker, NPM, PWA, Webpack, Gulp, Babel, SASS</li>
+              <li>Graphic Editors: Figma, Sketch, XD, Principle, Photoshop, Illustrator</li>
+              <li>Other: CI/CD, REST API, Performance and SEO optimisation, Wireframing, Prototyping</li>
+              <li>CMS: Experience in Magnolia, WordPress, Opencart</li>
+              <li>OS: UNIX, Windows</li>
+            </ul>
+          </p>
+        </details>
+
+        <details class="footer__details">
+          <summary class="footer__summary">
+            <p class="footer__summary-title">UI/UX Design</p>
+            <svg class="footer__summary-chevron" width="44" height="44" viewbox="0 0 44 44" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path d="M11 16.5L22 27.5L33 16.5" stroke="black" stroke-width="4" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>
+
+          </summary>
+
+          <p class="footer__details-content">
+            Designing for web:
+            <ul>
+              <li>Websites design</li>
+              <li>Mobile Apps design</li>
+              <li>Design Systems design</li>
+              <li>Brand identity design</li>
+              <li>Logo design</li>
+              <li>Prototyping</li>
+            </ul>
+          </p>
+        </details>
+      </div>
+
+      <p class="footer__open-source">This Website ⚙️ is open sourced, you can find code
+        <a href="https://github.com/thevrus/thevrus" target="_blank" rel="noopener">here on GitHub</a>.<br>
+        © All rights reserved, 2019.
+      </p>
+
+    </div>
+
+    <a class="footer__mail" href="mailto:rusinvadym@gmail.com">
+      <p class="footer__mail-text">
+        Let’s discuss your project: <br>
+        <span class="footer__span-mail">rusinvadym@gmail.com</span>
+      </p>
+    </a>
+  </footer>
+
+  #include('./partials/scripts.html')
+</body>
+
+</html>

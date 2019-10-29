@@ -3,6 +3,10 @@ const del = require('del');
 const plumber = require('gulp-plumber');
 const browserSync = require('browser-sync');
 
+// FTP
+const ftp = require('vinyl-ftp');
+const FTP_SETTINGS = require('./settings-ftp');
+
 // Styles
 const sass = require('gulp-sass');
 sass.compiler = require('node-sass');
@@ -52,8 +56,8 @@ const PATHS = {
     input: './src/scss/**/*.scss',
   },
   html: {
-    input: 'src/pages/*.html',
-    watch: './src/pages/**/*.html'
+    input: 'src/html/*.html',
+    watch: './src/html/**/*.html'
   },
   images: {
     input: 'src/images/**/*',
@@ -63,7 +67,7 @@ const PATHS = {
 
 const FILEINCLUDE = {
   prefix: '#',
-  basepath: './src/pages'
+  basepath: './src/html'
 };
 
 // ------------------------ TASKS ------------------------
@@ -151,6 +155,18 @@ gulp.task('js:prod', function () {
     }))
     .pipe(gulp.dest(PATHS.output))
 })
+
+gulp.task('deploy', function () {
+
+  const conn = ftp.create({
+    host: FTP_SETTINGS.host,
+    user: FTP_SETTINGS.user,
+    password: FTP_SETTINGS.password
+  });
+
+  return gulp.src('./dist/**')
+    .pipe(conn.dest(FTP_SETTINGS.dest));
+});
 
 gulp.task('watch', function (callback) {
   browserSync.init({

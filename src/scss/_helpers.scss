@@ -1,0 +1,8 @@
+.dark {
+    color: #fff !important;
+    background-color: var(--dark, #000) !important;
+
+    a {
+        @extend .dark;
+    }
+}

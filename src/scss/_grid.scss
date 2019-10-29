@@ -16,8 +16,13 @@ $breakpoints: (
 }
 
 .container {
+  width: 100%;
   margin: 0 auto;
   padding: 0 15px;
-  max-width: 960px;
-  width: 100%;
+  max-width: 1160px;
+
+  &--narrow {
+    @extend .container;
+    max-width: 1000px;
+  }
 }

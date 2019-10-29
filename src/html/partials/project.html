@@ -1,0 +1,16 @@
+#if (context.dark) {<div class="dark">}
+  <nav class="nav"><a class="nav__brand" href="/">Vadim Rusin</a></nav>
+
+  <header class="header">
+    <div class="header__subtitle">Project</div>
+    <h1 class="header__title">#title</h1>
+  </header>
+
+    <main class="work container--narrow">
+      #for (var i = 0; i < images.length; i++) {
+        <a href="`+images[i]+`">
+          <img src="`+images[i]+`" class="work__img" alt="#title image" />
+        </a>
+      }
+    </main>
+  #if (context.dark) {</div>}
