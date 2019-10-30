@@ -1,4 +1,4 @@
-# Clever
+# thevrus.space
 
 ## HTML
 
@@ -16,7 +16,7 @@ CSS builds with **SASS**, `.scss` syntax.
 
 ## JavaScript
 
-Main JavaScript located in `src/js/index.js`.
+Main JavaScript located in `src/js/main.js`.
 Compiles with Babel.
 
 ---
