@@ -30,12 +30,11 @@
     "gulp-header": "^2.0.9",
     "gulp-htmlmin": "^5.0.1",
     "gulp-plumber": "^1.2.1",
+    "gulp-replace": "^1.0.0",
+    "gulp-sourcemaps": "^2.6.5",
     "gulp-sass": "^4.0.2",
     "gulp-uglify": "^3.0.2",
     "vinyl-ftp": "^0.6.1"
   },
-  "dependencies": {
-    "gulp-sourcemaps": "^2.6.5",
-    "swup": "^2.0.7"
-  }
+  "dependencies": {}
 }

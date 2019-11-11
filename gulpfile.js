@@ -2,6 +2,7 @@ const gulp = require('gulp');
 const del = require('del');
 const plumber = require('gulp-plumber');
 const browserSync = require('browser-sync');
+const fs = require('fs');
 
 // FTP
 const ftp = require('vinyl-ftp');
@@ -23,6 +24,7 @@ const uglify = require('gulp-uglify');
 const header = require('gulp-header');
 const fileinclude = require('gulp-file-include');
 const htmlmin = require('gulp-htmlmin');
+const replace = require('gulp-replace');
 const package = require('./package.json');
 
 // SETTINGS
@@ -96,6 +98,26 @@ gulp.task('fileinclude', function () {
     .pipe(fileinclude(FILEINCLUDE))
     .pipe(gulp.dest('./dist'))
     .pipe(browserSync.stream());
+});
+
+gulp.task('replace:js', function () {
+  let src = './dist/*.html';
+  let script = /<script defer="defer" src="main.js"[^>]*><\/script>/;
+  let js = fs.readFileSync('./dist/main.js', 'utf8');
+
+  return gulp.src(src)
+    .pipe(replace(script, () => '<script defer>\n' + js + '\n</script>'))
+    .pipe(gulp.dest(PATHS.output));
+});
+
+gulp.task('replace:css', function () {
+  let src = './dist/*.html';
+  let styles = /<link rel="stylesheet" href="main.css"[^>]*>/;
+  let css = fs.readFileSync('./dist/main.css', 'utf8');
+
+  return gulp.src(src)
+    .pipe(replace(styles, () => '<style>\n' + css + '\n</style>'))
+    .pipe(gulp.dest(PATHS.output));
 });
 
 gulp.task('fileinclude:prod', function () {
@@ -184,4 +206,4 @@ gulp.task('watch', function (callback) {
 });
 
 gulp.task('dev', gulp.series('clean', 'fileinclude', 'assets', 'favicon', 'images', 'css:dev', 'js:prod', 'watch'));
-gulp.task('build', gulp.series('clean', 'fileinclude:prod', 'assets', 'favicon', 'images', 'css:prod', 'js:prod'));
+gulp.task('build', gulp.series('clean', 'fileinclude:prod', 'assets', 'favicon', 'images', 'css:prod', 'js:prod', 'replace:css', 'replace:js'));
